@@ -22,13 +22,14 @@ import os
 from . import pca
 
 
+
 class EigenFaces(object):
     def train(self, root_training_images_folder):
         self.projected_classes = []
 
         self.list_of_arrays_of_images, self.labels_list, \
             list_of_matrices_of_flattened_class_samples = \
-                read_images(root_training_images_folder)
+                read_images(root_training_images_folder,(100,100))
 
          # create matrix to store all flattened images
         images_matrix = np.array([np.array(Image.fromarray(img)).flatten()

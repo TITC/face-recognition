@@ -18,7 +18,7 @@ def take_training_photos(name, n):
             ensure_dir_exists(face_path)
             normalized.save_to('{}/{}.pgm'.format(face_path, i + 1))
 
-            normalized.show()
+            # normalized.show()
 
 
 def parse_command():
@@ -37,7 +37,7 @@ def print_help():
 
 def train():
     name = input('Enter your name: ')
-    take_training_photos(name, 10)
+    take_training_photos(name, 100)
 
 
 def main():

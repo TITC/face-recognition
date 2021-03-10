@@ -20,7 +20,7 @@ def pca(X):
         e,EV = np.linalg.eigh(M) # eigenvalues and eigenvectors
         tmp = np.dot(X.T,EV).T # this is the compact trick
         V = tmp[::-1] # reverse since last eigenvectors are the ones we want
-        S = np.sqrt(e[::-1]) # reverse since eigenvalues are in increasing order
+        S = np.sqrt(abs(e[::-1])) # reverse since eigenvalues are in increasing order
 
         for i in range(V.shape[1]):
             V[:,i] /= S
