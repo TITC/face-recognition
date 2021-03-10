@@ -58,7 +58,9 @@ class EigenFaces(object):
             if distance < min_distance:
                 min_distance = distance
                 min_class = self.labels_list[i]
-        # print(min_class, min_distance)
+        print(min_class, min_distance)
+        if min_distance>3500:#threshold
+            min_class = "Alien"
         return min_class
 
     def __repr__(self):

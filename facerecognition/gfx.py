@@ -70,7 +70,7 @@ class FaceDetector:
             face = image.cut(x, y, w, h).gray().scale(100, 100).to_numpy_array()
             predicted_name = self.clf.predict_face(face)
 
-            image.put_text(predicted_name, x + 20, y + h + 45)
+            image.put_text(predicted_name, x + 20, y + h + 45)#show name 
 
         cv2.imshow('', image._img)
         if wait:
