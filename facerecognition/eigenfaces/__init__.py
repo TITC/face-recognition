@@ -95,6 +95,7 @@ def read_images(path, sz=None):
                         if (sz is not None):
                             im = im.resize(sz, Image.ANTIALIAS)
                             im = im.convert("L")
+                            im.save(os.path.join(subject_path, filename))
                         images.append(np.asarray(im, dtype = np.uint8))
 
                     except IOError as e:
