@@ -59,7 +59,7 @@ class EigenFaces(object):
                 min_distance = distance
                 min_class = self.labels_list[i]
         print(min_class, min_distance)
-        if min_distance>2500:#threshold
+        if min_distance>6000:#threshold
             min_class = "unknown identity"
         return min_class
 
