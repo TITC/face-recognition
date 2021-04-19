@@ -30,7 +30,7 @@ def print_help():
     print("""Usage:
     train - takes 10 pictures from webcam to train software to recognize your
             face.
-    demo - runs live demo. Captures images from webcam and tries to recognize
+    detect - runs live detect. Captures images from webcam and tries to recognize
            faces.
     """)
 
@@ -42,9 +42,9 @@ def train():
 
 def main():
     cmd = parse_command()
-    if cmd == 'train':
+    if cmd == 'New':
         train()
-    elif cmd == 'demo':
+    elif cmd == 'detect':
         webcam.display()
     else:
         print_help()
