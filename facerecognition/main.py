@@ -28,7 +28,7 @@ def parse_command():
 
 def print_help():
     print("""Usage:
-    train - takes 10 pictures from webcam to train software to recognize your
+    New - takes 10 pictures from webcam to train software to recognize your
             face.
     detect - runs live detect. Captures images from webcam and tries to recognize
            faces.
@@ -41,8 +41,9 @@ def train():
 
 
 def main():
-    cmd = parse_command()
-    if cmd == 'New':
+    # cmd = parse_command()
+    cmd = 'detect'
+    if cmd == 'new':
         train()
     elif cmd == 'detect':
         webcam.display()

@@ -94,6 +94,7 @@ def read_images(path, sz=None):
                         # resize to given size (if given) e.g., sz = (480, 640)
                         if (sz is not None):
                             im = im.resize(sz, Image.ANTIALIAS)
+                            im = im.convert("L")
                         images.append(np.asarray(im, dtype = np.uint8))
 
                     except IOError as e:
