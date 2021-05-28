@@ -41,8 +41,8 @@ def train():
 
 
 def main():
-    # cmd = parse_command()
-    cmd = 'detect'
+    cmd = parse_command()
+    # cmd = 'nwew'
     if cmd == 'new':
         train()
     elif cmd == 'detect':
